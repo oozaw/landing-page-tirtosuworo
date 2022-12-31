@@ -48,7 +48,7 @@
             <h1>404</h1>
             <h2>Halaman yang Anda tuju tidak ditemukan</h2>
             <a class="btn" href="{{ URL::previous() }}">Kembali</a>
-            <img src="/admin/img/not-found.svg" class="img-fluid py-5" alt="Page Not Found">
+            {{-- <img src="/admin/img/not-found.svg" class="img-fluid py-5" alt="Page Not Found"> --}}
          </section>
 
       </div>
