@@ -18,5 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// =========== admin ===========
+// login
 Route::get('dashboard/login', [LoginController::class, 'index']);
+
+// dashboard
+Route::get('dashboard', function () {
+    return view('admin.dashboard.index', [
+        "title" => "Dashboard"
+    ]);
+});
+
+// =========== end admin ===========
