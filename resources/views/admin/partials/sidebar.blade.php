@@ -10,7 +10,7 @@
 
       <li class="nav-item">
          <a class="nav-link collapsed" href="#">
-            <i class="bi bi-diagram-3"></i><span>Struktur</span>
+            <i class="bi bi-diagram-3"></i><span>Profil Desa</span>
          </a>
       </li><!-- End Berita Nav -->
 

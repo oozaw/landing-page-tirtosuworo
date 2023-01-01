@@ -14,19 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 // =========== admin ===========
 // login
 Route::get('dashboard/login', [LoginController::class, 'index']);
 
 // dashboard
-Route::get('dashboard', function () {
+Route::get('admin', function () {
     return view('admin.dashboard.index', [
         "title" => "Dashboard"
     ]);
 });
 
 // =========== end admin ===========
+
+// =========== landing page ===========
+// home
+Route::get('/', function () {
+    return view('landing-page.home', [
+        "title" => "Home"
+    ]);
+});
+// =========== end landing page ===========

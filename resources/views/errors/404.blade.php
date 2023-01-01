@@ -5,7 +5,8 @@
    <meta charset="utf-8">
    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-   <title>Tidak Ditemukan: 404 - Admin Desa Tirtosuworo</title>
+   <title>Tidak Ditemukan 404 - {{ str_contains(URL::previous(), 'admin') ? 'Admin' : '' }} Desa
+      Tirtosuworo</title>
    <meta content="" name="description">
    <meta content="" name="keywords">
 
