@@ -2,7 +2,7 @@
 
    <ul class="sidebar-nav" id="sidebar-nav">
       <li class="nav-item">
-         <a class="nav-link collapsed" href="index.html">
+         <a class="nav-link collapsed" href="/admin">
             <i class="bi bi-grid"></i>
             <span>Dashboard</span>
          </a>
@@ -15,7 +15,7 @@
       </li><!-- End Berita Nav -->
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#">
+         <a class="nav-link collapsed" href="/admin/news">
             <i class="bi bi-newspaper"></i><span>Berita</span>
          </a>
       </li><!-- End Berita Nav -->

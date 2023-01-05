@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\News;
+use App\Models\Umkm;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class NewsSeeder extends Seeder {
+class UMKMSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
     public function run() {
-        News::factory(20)->create();
+        Umkm::factory(5)->create();
     }
 }

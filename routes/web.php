@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // =========== admin ===========
 // login
-Route::get('dashboard/login', [LoginController::class, 'index']);
+Route::get('admin/login', [LoginController::class, 'index']);
 
 // dashboard
 Route::get('admin', function () {
@@ -26,6 +27,8 @@ Route::get('admin', function () {
         "title" => "Dashboard"
     ]);
 });
+
+Route::resource('admin/news', NewsController::class);
 
 // =========== end admin ===========
 

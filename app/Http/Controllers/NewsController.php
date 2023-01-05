@@ -6,16 +6,17 @@ use App\Http\Requests\StoreNewsRequest;
 use App\Http\Requests\UpdateNewsRequest;
 use App\Models\News;
 
-class NewsController extends Controller
-{
+class NewsController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+        return view('admin.berita.index', [
+            'title' => 'Daftar Berita',
+            'news' => News::all()
+        ]);
     }
 
     /**
@@ -23,8 +24,7 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -34,8 +34,7 @@ class NewsController extends Controller
      * @param  \App\Http\Requests\StoreNewsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreNewsRequest $request)
-    {
+    public function store(StoreNewsRequest $request) {
         //
     }
 
@@ -45,9 +44,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function show(News $news)
-    {
-        //
+    public function show(News $news) {
+        return view('admin.berita.show', [
+            'title' => 'Detail Berita',
+            'post' => $news
+        ]);
     }
 
     /**
@@ -56,8 +57,7 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
-    {
+    public function edit(News $news) {
         //
     }
 
@@ -68,8 +68,7 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateNewsRequest $request, News $news)
-    {
+    public function update(UpdateNewsRequest $request, News $news) {
         //
     }
 
@@ -79,8 +78,9 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
-    {
-        //
+    public function destroy(News $news) {
+        News::destroy($news->id);
+
+        return redirect("/admin/news")->with("success", "Data $news->title berhasil dihapus!");
     }
 }
